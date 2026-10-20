@@ -6,6 +6,7 @@ namespace: class-3
 resources:
 - ../../base
 - configmap.yaml
+- ingress.yaml
 
 patches:
 - path: patch-deployment.yaml
@@ -18,5 +19,4 @@ patches:
 #     skala-registry.skala-us.com/class-3/sk088-webserver=skala-registry.skala-us.com/class-3/sk088-webserver:<NEW_TAG>
 images:
 - name: skala-registry.skala-us.com/class-3/sk088-webserver
-  newName: skala-registry.skala-us.com/class-3/sk088-webserver
-  newTag: 1.0-dk3-7aefa9c
+  newTag: "1.0"
