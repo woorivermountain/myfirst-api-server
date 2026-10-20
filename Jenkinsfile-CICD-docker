@@ -4,7 +4,7 @@ pipeline {
   environment {
     GIT_URL = 'https://github.com/woorivermountain/myfirst-api-server.git'
     GIT_BRANCH = 'main'
-    GIT_ID = 'sk088-github-id'
+    GIT_ID = 'skala-github-id'
     IMAGE_NAME = 'sk088-webserver'
     IMAGE_TAG = '1.0'
     IMAGE_REGISTRY_URL = 'skala-registry.skala-us.com'
