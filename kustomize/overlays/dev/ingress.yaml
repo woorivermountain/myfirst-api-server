@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+#  annotations:
+#    cert-manager.io/cluster-issuer: letsencrypt-prod
+  name: sk088-myfirst-ingress
+  namespace: class-3
+  labels:
+    app: sk088-myfirst-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: sk088-myfirst-ingress.class-3.skala-us.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: sk088-myfirst-api-server
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - 'sk088-ingress.class-3.skala-us.com'
+    secretName: wildcard-class-3-skala-us-com-tls
